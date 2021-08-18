@@ -42,4 +42,8 @@
         <filter-name>Utf8Filter</filter-name>
         <url-pattern>*</url-pattern>
     </filter-mapping>
+
+    <listener>
+        <listener-class>ru.ac1dtest.SampleContextListener</listener-class>
+    </listener>
 </web-app>
