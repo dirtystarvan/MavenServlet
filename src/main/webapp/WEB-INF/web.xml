@@ -13,4 +13,33 @@
         <servlet-name>ru.ac1dtest.MavenServlet</servlet-name>
         <url-pattern>/test</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ru.ac1dtest.MavenServlet</servlet-name>
+        <url-pattern>/posttest</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>UsernameFilter</filter-name>
+        <filter-class>ru.ac1dtest.UsernameFilter</filter-class>
+        <init-param>
+            <param-name>UserToBan</param-name>
+            <param-value>BadUser</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>UsernameFilter</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>Utf8Filter</filter-name>
+        <filter-class>ru.ac1dtest.Utf8Filter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>Utf8Filter</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
 </web-app>
